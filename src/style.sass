@@ -1,0 +1,270 @@
+@use '__interaction.sass'
+@use '__vars.sass' as v
+@mixin minWidth()
+  min-width: 1200px
+@mixin shadow()
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2)
+
+/* reset */
+*
+  position: relative
+  box-sizing: border-box
+  font-family: "微軟正黑體"
+  // border: 1px solid #000
+  html, body
+    margin: 0
+    padding: 0
+
+html, body
+  height: 100%
+  width: 100%
+  // background-color: black
+
+/* debugger of nav */
+#nav
+  .container
+  *
+    // border: 1px solid #000
+
+/* base of nav */
+#nav
+  +shadow()
+  z-index: 100
+  background-color: white
+  top: 0
+  width: 100%
+  .container
+    width: 80%
+    height: 40px
+    margin: 0 auto
+  .icon
+    +shadow()
+    position: absolute
+    top: 100%
+    transform: translateY(-50%)
+    background-color: white
+    width: 200px
+    height: 60px
+    // padding: 10px 32px
+    border-radius: 50%
+    img
+      width: 100%
+      height: 100%
+  .info
+    position: absolute
+    right: 0
+    top: 50%
+    transform: translateY(-50%)
+    *
+      display: inline-block
+      vertical-align: middle
+  .info_time
+    margin-right: 20px
+    color: #999
+  select
+    appearance: none
+    -webkit-appearance: none
+    background: url('./asset/img/arrow.png') no-repeat right center transparent
+    background-color: black
+    background-repeat: none
+    color: white
+    border-radius: 4px
+    width: 6rem
+    padding: 2px 10px
+    padding-right: 0px
+    option
+      border: 1px solid white
+
+/* debugger of content */
+#content
+  .container
+  *
+    // border: 1px solid #000
+
+/* base of content */
+#content
+  height: 550px
+  width: 100%
+  background-color: v.$color_blue
+  .container
+    z-index: 100
+    height: 100%
+    width: 80%
+    margin: 0 auto
+    padding-top: 30px
+  h1, p, span
+    margin: 0
+    text-align: center
+  h1.title
+    // font-size: 120px
+    // color: v.$color_yellow
+    height: 150px
+    background-image: url('./asset/img/title.png')
+    background-repeat: no-repeat
+    background-position: 50% 50%
+    // background-size: 100%
+    object-fit: contain
+  p, span
+    color: white
+    font-size: 24px
+  p.subtitle
+    position: absolute
+    bottom: -10px
+    right: 13%
+    font-weight: 300
+    margin-top: 10px
+    text-align: right
+  #main
+    height: 50%
+    width: 100%
+    margin-top: 20px
+    span
+      font-size: 20px
+      position: absolute
+      left: 20%
+      top: 0
+      transform: translateY(-100%)
+    img
+      position: absolute
+      width: 100%
+  #inputs_user
+    z-index: 101
+    background-color: darken(v.$color_blue,5)
+    position: absolute
+    bottom: -30%
+    left: 50%
+    transform: translateX(-50%)
+    padding: 15px 10px
+    display: flex
+    align-items: center
+    justify-content: center
+    .inputs
+      margin-right: 20px
+    input
+      display: block
+      width: 120px
+      &:last-child
+        margin-top: 10px
+    .btn_login
+      cursor: pointer
+      +shadow
+      padding: 20px 10px
+      border-radius: 10px
+      border: 2px solid darken(v.$color_blue,5)
+      background-color: v.$color_yellow
+
+/* Debug of gallery */
+#gallery
+  // border: 1px solid #000
+  *
+    // border: 1px solid #000
+
+/* base of gallery */
+#gallery
+  background-color: v.$color_blue
+  width: 100%
+  height: 300px
+  .container
+    margin: 0 auto
+    display: flex
+    align-items: center
+    justify-content: space-evenly
+    // transform: translateY(-30px)
+    height: 100%
+    width: 80%
+    .car
+      border: 1px solid rgba(white, .5)
+      width: 200px
+      height: 200px
+    img
+      width: 120%
+      position: absolute
+      // border: 1px solid #000
+      bottom: -20px
+      left: 50%
+      transform: translateX(-50%)
+      transition-duration: .4s
+
+
+/* Debug of footer */
+#footer
+  border: 1px solid #000
+  *
+    // border: 1px solid #000
+
+/* base of footer */
+#footer
+  .container
+  .info_names
+    background: radial-gradient(circle, v.$footer_blue_center 60%, v.$footer_blue_peri)
+    display: flex
+    align-items: center
+    justify-content: center
+    *
+      display: inline-block
+      padding: 5px 10px
+      color: white
+      letter-spacing: 2px
+    .divider
+      margin: 0 10px
+  .copyright
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 0 auto
+    background-color: #333
+    color: #999
+    padding: 8px 0px
+    sup
+
+/* Debug of chat */
+#chat
+  // border: 1px solid #000
+  *
+    // border: 1px solid #000
+
+/* base of chat */
+#chat
+  cursor: pointer
+  position: absolute
+  right: -5px
+  top: 40%
+  font-size: 0
+  .container
+    transition-duration: .3s 
+    right: -20px
+  .round, .rect
+    position: relative
+    background-color: white
+    display: inline-block
+    height: 50px
+    width: 50px
+  .round
+    box-shadow: -12px 10px 20px -4px rgba(0, 0, 0, 0.2)
+    z-index: 1
+    border-radius: 50%
+    right: -22px
+  .rect
+    box-shadow: -12px 10px 20px 5px rgba(0, 0, 0, 0.2)
+    width: 40px
+  img
+    z-index: 3
+    position: absolute
+    right: 25px
+    top: 50%
+    transform: translate(0, -50%) scale(0.9)
+
+
+  
+
+#nav, #content, #footer, #gallery
+  .container
+    +minWidth()
+
+
+
+
+
+
+
+  

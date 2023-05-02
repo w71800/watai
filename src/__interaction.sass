@@ -1,0 +1,28 @@
+@use './__vars.sass' as v
+  
+#content
+  .container
+    #main
+      #inputs_user
+        .btn_login
+          &:hover
+            border: 2px solid v.$color_yellow
+            font-weight: bold
+            background: white
+            color: v.$color_yellow
+
+#gallery
+  .container
+    .car1:hover
+      img
+        transform: translate(calc(-50% + -20px), 20px)
+    .car2:hover
+      img
+        transform: translate(calc(-50%), 20px)
+    .car3:hover
+      img
+        transform: translate(calc(-50% + 20px), 20px)
+
+#chat:hover
+  .container
+    transform: translateX(-10px)

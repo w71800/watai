@@ -1,0 +1,53 @@
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+    link(rel="stylesheet", href="style.css")
+  body 
+    #nav
+      .container
+        .icon
+          img(src="./asset/img/icon.png", alt="")
+        .info
+          .info_time GMT+8 2020-05-07 10:13:44
+          select.lang
+            option 繁體中文
+            option English
+    #content
+      .container 
+        h1.title
+          p.subtitle Choose the car as far as you can
+        #main
+          span Here?
+          #inputs_user 
+            .inputs
+              input.id(type="text" placeholder="amount")
+              input.pwd(type="password" placeholder="password")
+            .btn_login LOGIN
+          img(src="./asset/img/main_cars.png", alt="")
+    #gallery
+      .container
+        .car.car1
+          img(src="./asset/img/car_left.png", alt="")
+        .car.car2
+          img(src="./asset/img/car_middle.png", alt="")
+        .car.car3
+          img(src="./asset/img/car_right.png", alt="")
+    #footer
+      .container
+        .info_names
+          .name_cht 潘威利
+          .divider |
+          .name_eng William Pan
+        .copyright Copyright
+          sup &copy;
+          span &nbsp;&nbsp; 2020 wataidesign.com
+
+    #chat
+      .container
+        .round
+        .rect
+        img(src="./asset/img/icon_chat.png", alt="")
+  script(src="script.js")
