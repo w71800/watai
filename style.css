@@ -209,9 +209,6 @@ html, body {
 }
 
 /* Debug of footer */
-#footer {
-  border: 1px solid #000;
-}
 /* base of footer */
 #footer .info_names {
   background: radial-gradient(circle, #2E89F8 60%, #562FDA);
