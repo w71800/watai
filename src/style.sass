@@ -19,7 +19,6 @@ html, body
   height: 100%
   width: 100%
   // background-color: black
-
 /* debugger of nav */
 #nav
   .container
@@ -227,32 +226,30 @@ html, body
 #chat
   cursor: pointer
   position: absolute
-  right: -5px
+  right: 0px
   top: 40%
   font-size: 0
   .container
-    transition-duration: .3s 
-    right: -20px
   .round, .rect
-    position: relative
+    transition-duration: .3s
     background-color: white
-    display: inline-block
     height: 50px
     width: 50px
-  .round
-    box-shadow: -12px 10px 20px -4px rgba(0, 0, 0, 0.2)
-    z-index: 1
-    border-radius: 50%
-    right: -22px
   .rect
+    position: absolute
+    right: 0
+    width: 25px
     box-shadow: -12px 10px 20px 5px rgba(0, 0, 0, 0.2)
-    width: 40px
+  .round
+    // border: 1px solid #000
+    transform: translateX(-50%)
+    border-radius: 50%
   img
     z-index: 3
     position: absolute
-    right: 25px
+    left: 50%
     top: 50%
-    transform: translate(0, -50%) scale(0.9)
+    transform: translate(-50%, -50%) scale(0.9)
 
 
   
