@@ -27,7 +27,7 @@ html, body
 /* base of nav */
 #nav
   +shadow()
-  z-index: 100
+  z-index: 10
   background-color: white
   top: 0
   width: 100%
@@ -36,6 +36,7 @@ html, body
     height: 40px
     margin: 0 auto
   .icon
+    z-index: 11
     +shadow()
     position: absolute
     top: 100%
@@ -81,6 +82,7 @@ html, body
 
 /* base of content */
 #content
+  z-index: 8
   height: 550px
   width: 100%
   background-color: v.$color_blue
@@ -164,6 +166,7 @@ html, body
   width: 100%
   height: 300px
   .container
+    background-color: v.$color_blue
     margin: 0 auto
     display: flex
     align-items: center
@@ -225,10 +228,11 @@ html, body
 /* base of chat */
 #chat
   cursor: pointer
-  position: absolute
+  position: fixed
   right: 0px
-  top: 40%
+  top: 200px
   font-size: 0
+  z-index: 100
   .container
   .round, .rect
     transition-duration: .3s
